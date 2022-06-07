@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size:100%;
+}
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+--Dark-cyan: hsl(184, 100%, 22%);
+--Very-dark-cyan: hsl(179, 100%, 13%);
+--Transparent-white: hsla(0, 0%, 100%, 0.75);
+--Very-light-gray: hsl(0, 0%, 95%);
+
+}
+body{
+    background-color: var(--Very-light-gray);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    min-height:100vh;
+    font-size:15px;
+    margin-top:50px;
+    
+}
+
+h1{
+    text-transform: uppercase;
+    color:var(--Very-light-gray);
+    font-size:35px;
+    padding-top: 20px;
+    font-family: 'Big Shoulders Display',sans-serif;
+}
+
+p{
+    color:var(--Transparent-white);
+    line-height: 1.5em;
+    font-size:12px;
+    padding:20px 0;
+    font-family:'Lexend Deca',sans-serif;
+}
+.card{
+    max-width:260px;
+    padding:40px;
+    flex-direction:column;
+}
+#sedans{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    background-color: var(--Bright-orange);
+}
+#sedans button{
+    color:var(--Bright-orange);
+}
+#suv button{
+    color:var(--Dark-cyan);
+}
+#luxury button{
+    color:var(--Very-dark-cyan);
+}
+button{
+    margin:40px 0 10px;
+    background-color: var(--Very-light-gray);
+    padding:10px 20px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border: 1px solid var(--Very-light-gray);
+    
+}
+#suv{
+    background-color: var(--Dark-cyan);
+}
+#luxury{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom:50px;
+    background-color: var(--Very-dark-cyan);
+}
+
+@media (min-width:850px){
+    body{
+        display:flex;
+        flex-direction:row;
+    }
+    #sedans{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+    }
+    #luxury{
+        margin:0;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius:0;
+    }
+
+}
+#sedans button:hover{
+    background-color: var(--Bright-orange);
+    color:var(--Very-light-gray);
+}
+#suv button:hover{
+    background-color: var(--Dark-cyan);
+    color:var(--Very-light-gray);
+}
+#luxury button:hover{
+    background-color: var(--Very-dark-cyan);
+    color:var(--Very-light-gray);
+}
